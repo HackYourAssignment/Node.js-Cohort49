@@ -1,7 +1,7 @@
 {
   "name": "1-blog-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Anyone here still remember blogs!? They were all the rage around 10 years ago. We are a bit late to the party, but I think we can still make some money with a blog application.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,5 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "keywords": []
 }
