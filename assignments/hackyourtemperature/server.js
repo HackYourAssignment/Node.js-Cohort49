@@ -1,13 +1,3 @@
-import express from "express";
-const app = express();
-
-app.get("/", (req, res) => {
-  res.send("hello from backend to frontend!");
-});
-app.use(express.json());
-app.post("/weather", (req, res) => {
-  const cityName = req.body.cityName;
-  res.send(cityName);
-});
+import  app from "./app.js";
 
 app.listen(3000);
