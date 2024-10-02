@@ -16,6 +16,10 @@
  *   where to use `exports` and where `require`?
  */
 
+ const padLeft = require("./padLeft.js").padLeft;
+
 let numbers = [ "12", "846", "2", "1236" ];
 
-// YOUR CODE GOES HERE
+numbers.forEach(num => {
+  console.log(padLeft(num, 5, " "));
+});
