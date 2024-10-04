@@ -8,6 +8,11 @@
  *
  */
 
-let numbers = [ "12", "846", "2", "1236" ];
+ const leftPad = require("left-pad");
 
-// YOUR CODE GOES HERE
+ let numbers = [ "12", "846", "2", "1236" ];
+ 
+ numbers.forEach(num => {
+   console.log(leftPad(num, 8, " "));
+ });
+ 
