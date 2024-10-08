@@ -13,7 +13,7 @@ describe("POST /weather", () => {
   it("should return an error message for an invalid city", async () => {
     const response = await request.post('/weather').send({ cityName: 'InvalidCity' });
     expect(response.status).toBe(404);
-    expect(response.body.weatherText).toBe("City is not found!");
+    expect(response.body.weatherText).toBe("City not found!");
   });
 
   it("should return an error if no city name is provided", async () => {
