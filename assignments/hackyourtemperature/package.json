@@ -1,0 +1,27 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "> If you are following the HackYourFuture curriculum we recommend you to start with module 1: [HTML/CSS/GIT](https://github.com/HackYourFuture/HTML-CSS). To get a complete overview of the HackYourFuture curriculum first, click [here](https://github.com/HackYourFuture/curriculum).",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "express-handlebars": "^8.0.1",
+    "nock": "^13.5.5",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.25.4",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
