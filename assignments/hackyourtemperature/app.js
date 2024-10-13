@@ -1,7 +1,10 @@
 import express from "express";
-import { keys } from "./sources/keys.js";
 import fetch from "node-fetch";
+import dotenv from "dotenv"; 
+ dotenv.config();
+
  const app = express();
+ const API_KEY = process.env.API_KEY;
 
 app.use(express.json());
 
@@ -14,14 +17,13 @@ app.get("/", (req, res) => {
 app.post("/weather", async (req, res) => {
   try {
     const cityName = req.body.cityName;
-    const isValidCityName = /^[A-Za-z\s]+$/.test(cityName);
-    if (!cityName || !isValidCityName) {
+    if (!cityName ) {
       return res.status(400).json({ error: "Invalid city name" });
     }
  
     const unit = 'metric';
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=${keys.API_KEY}&units=${unit}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&APPID=${API_KEY}&units=${unit}`
     );
 
     if (!response.ok) {
