@@ -1,4 +1,4 @@
-import app from '../server.js';
+import app from '../app.js';
 import supertest from 'supertest';
 
 const request = supertest(app);
@@ -13,7 +13,7 @@ describe('POST /weather', () => {
   it('should return 404 if cityName is invalid', async () => {
     const response = await request
       .post('/weather')
-      .send({ cityName: 'invalidcity' });
+      .send({ cityName: 'invalidCity' });
     expect(response.status).toBe(404);
     expect(response.body.error).toBe('city not found');
   });
